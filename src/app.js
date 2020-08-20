@@ -25,11 +25,11 @@ app.get('/repositories', (request, response) => {
 })
 
 app.post('/repositories', (request, response) => {
-  const { title, url, techs } = request.body
+  const { title, url, techs, id } = request.body
 
   if (!title || !url || !techs) return response.status(400).json({ error: 'Repository body invalid' })
 
-  const repository = new Repository({ title, url, techs })
+  const repository = new Repository({ title, url, techs }, id)
 
   repositories.push(repository)
 

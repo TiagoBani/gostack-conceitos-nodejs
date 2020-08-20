@@ -4,8 +4,8 @@
   "main": "src/server.js",
   "license": "MIT",
   "scripts": {
-    "predev": "yarn install",
-    "dev": "nodemon",
+    "prestart": "yarn install",
+    "start": "nodemon",
     "test": "jest"
   },
   "dependencies": {
